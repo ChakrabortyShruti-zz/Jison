@@ -1,3 +1,5 @@
+var numConvertor = require('number-to-words');
+
 var NumberNode = function(number){
 	this.value = number;
 }
@@ -5,6 +7,10 @@ var NumberNode = function(number){
 NumberNode.prototype = {
 	evaluate : function(){
 		return this.value;
+	},
+
+	evaluateToWords : function(){
+		return numConvertor.toWords(this.value);
 	}
 }
 

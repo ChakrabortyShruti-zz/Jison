@@ -25,7 +25,8 @@
 
 expressions
     : e EOF
-        {return $$}
+        {console.log($$.evaluate());
+        console.log($$.evaluateToWords())}
     ;
 
 e

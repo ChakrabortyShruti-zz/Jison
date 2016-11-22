@@ -1,6 +1,6 @@
 var assert = require('assert');
-var OperatorNode = require('./operatorNode');
-var NumberNode = require('./numNode');
+var OperatorNode = require('../operatorNode.js');
+var NumberNode = require('../numNode.js');
 
 describe('operatorNode',function(){
 	it('should generate Node for operator',function(){

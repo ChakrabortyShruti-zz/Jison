@@ -1,13 +1,14 @@
 %{
-    var numberNode = require('./numNode.js');
-    var operatorNode = require('./operatorNode.js');
+    var path = require('path');
+    var numberNode = require(path.resolve('./numNode.js'));
+    var operatorNode = require(path.resolve('./operatorNode.js'));
 %}
 
 %lex
 %%
 
 \s+                   /* skip whitespace */
-[0-9]+  				  return 'NUMBER'
+[0-9]+  		      return 'NUMBER'
 "+"                   return '+'
 "*"					  return '*'
 <<EOF>>               return 'EOF'
@@ -25,8 +26,7 @@
 
 expressions
     : e EOF
-        {console.log($$.evaluate());
-        console.log($$.evaluateToWords())}
+        {return $$}
     ;
 
 e
@@ -43,4 +43,3 @@ e
         $$ = new numberNode(Number(yytext))
         }
     ;
-

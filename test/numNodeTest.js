@@ -1,5 +1,5 @@
 var assert = require('assert');
-var NumberNode = require('./numNode')
+var NumberNode = require('../numNode.js')
 
 describe('numNode',function(){
 	it('should generate Node Of number',function(){

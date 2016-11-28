@@ -12,11 +12,6 @@ var signs = {'-':{
 				type:'*',
 				toWords:"TIMES",
 				evaluate : function(l,r){return l*r;}
-			},
-			'=':{
-				type:'=',
-				toWords:"EQUALS",
-				evaluate : function(l,r){return l=r;}
 			}};
 
 module.exports = signs;

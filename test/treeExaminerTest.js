@@ -10,7 +10,7 @@ var parser = new jison.Parser(grammar);
 
 describe("Tree Examiner",function() {
 	it("should store the value of identifiers as {x:10}",function(){
-		var tree = parser.parse('x=10;5+x+2;');
+		var tree = parser.parse('x=10;');
 		var treeExaminer = new TreeExaminer(tree);
 		treeExaminer.putAssignmentValues();
 		assert.deepEqual({x:10},treeExaminer.variableStore);

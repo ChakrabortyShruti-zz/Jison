@@ -23,14 +23,18 @@ describe("Grammar with assignment operator",function(){
 					type:'operator'
 				},
 				children:[
-				{parent:
+				{
+					parent:
 					{
 						operator:'+',
 						type:'operator'
 					},
 					children:[
-					{value:5},
-					{value:'x'}
+						{value:5},
+						{
+							operator:'x',
+							type:'identifier'
+						}
 					]
 				},
 				{value:2}
@@ -48,7 +52,12 @@ describe("Grammar with assignment operator",function(){
 					operator:'=',
 					type:'operator'
 				},
-				children:[{value:'x'},{value:10}]
+				children:[
+				{
+					operator:'x',
+					type:'identifier'
+				},
+				{value:10}]
 			},
 			{parent:
 				{
@@ -62,7 +71,11 @@ describe("Grammar with assignment operator",function(){
 							operator:'+',
 							type:'operator'
 						},
-						children:[{value:'x'},{value:2}]
+						children:[
+						{
+							operator:'x',
+							type:'identifier'
+						},{value:2}]
 					}
 				]
 			}];

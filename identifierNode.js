@@ -1,10 +1,12 @@
 var IdentifierNode = function(variable){
-	this.value = variable;
+	this.operator = variable;
+	this.type = "identifier";
 }
 
 IdentifierNode.prototype = {
 	evaluate : function(){
-		return this.value;
+		console.log('in identifier');
+		return this.operator;
 	}
 }
 

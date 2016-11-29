@@ -1,9 +1,9 @@
 %{
 	var path = require('path');
-	var optNode = require(path.resolve('./operatorNode.js'));
-	var numNode = require(path.resolve('./numNode.js'));
-	var identifierNode = require(path.resolve('./identifierNode.js'));
-	var Tree = require(path.resolve('./Tree.js'));
+	var optNode = require(path.resolve('./lib/operatorNode.js'));
+	var numNode = require(path.resolve('./lib/numNode.js'));
+	var identifierNode = require(path.resolve('./lib/identifierNode.js'));
+	var Tree = require(path.resolve('./lib/Tree.js'));
 	var trees = [];
 %}
 

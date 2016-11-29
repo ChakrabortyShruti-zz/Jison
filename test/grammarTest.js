@@ -2,7 +2,7 @@ var assert = require('assert');
 var jison = require('jison');
 var fs = require('fs');
 
-var grammar = fs.readFileSync('./assignment.jison','utf8');
+var grammar = fs.readFileSync('./lib/assignment.jison','utf8');
 
 var parser = new jison.Parser(grammar);
 

@@ -1,7 +1,7 @@
 var assert = require('assert');
-var OperatorNode = require('../operatorNode.js');
-var NumberNode = require('../numNode.js');
-var Tree = require('../Tree.js');
+var OperatorNode = require('../lib/operatorNode.js');
+var NumberNode = require('../lib/numNode.js');
+var Tree = require('../lib/Tree.js');
 
 describe('operatorNode',function(){
 	it('should generate Node for operator "3+1"',function(){
